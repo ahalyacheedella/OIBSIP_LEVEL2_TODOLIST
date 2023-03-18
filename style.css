@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    background: #270eca;
+    background:linear-gradient(139deg,#efe7e7 0%,rgb(18, 11, 217) 90%);   
+}
+.container{
+    position:relative;
+    max-width:800px;
+    padding:10px;
+    margin:0 auto;
+}
+.input{
+	font-family:Impact,sans-serif;
+	text-align:center;
+}
+
+.addTask{
+    width:100%;
+    display:flex;
+    padding:10px 0;
+}
+.addTask > input[type="text"]{
+    width:90%;
+    color:rgb(9, 7, 7);
+    border:none;
+    border-bottom:2px solid rgb(18, 17, 17);
+    background:none;
+    padding:10px;
+    font-size:22px;
+    outline:none;
+}
+.addTask button{
+    margin:0 10px;
+    background:rgba(11, 10, 10, 0.133);
+	font-family:Italic,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(6, 5, 5);
+    font-size:18px;
+    text-transform:uppercase;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.notCompleted,.Completed{
+ margin:5px 0;
+ padding:20px;
+}
+h3{
+    font-size:28px;
+    text-transform:uppercase;
+    text-align:center;
+    color:rgb(21, 16, 16);
+}
+ol{
+    list-style:none;
+    counter-reset:my-counter;
+
+}
+ol li{
+    width:100%;
+    padding:18px;
+    margin:5px 0;
+    background: #5a09e5;
+    font-size:22px;
+    counter-increment:my-counter;
+}
+ol.Completed li{
+    background:#a7aeb3;
+}
+ol.Completed li::before{
+    content:counter(my-counter);
+    background: #080bd6;
+    width:2rem;
+    height:2rem;
+    border-radius:50%;
+    display:inline-block;
+    line-height:2rem;
+    text-align:center;
+    color:rgb(43, 44, 44);
+    margin-right: 0.5rem;
+}
+ol.notCompleted li::before{
+    content:counter(my-counter);
+    background: #9d9dac;
+    width:2rem;
+    height:2rem;
+    border-radius:50%;
+    display:inline-block;
+    line-height:2rem;
+    text-align:center;
+    color:rgb(28, 26, 26);
+    margin-right: 0.5rem;
+}
+li button{
+    float:right;
+    padding:5px;
+    font-size:28px;
+    line-height:28px;
+    margin-right:15px;
+    background:none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
